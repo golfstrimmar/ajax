@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+  <style>
+    .reference{
+      background: #00BCD4;
+    
+    }
+    form{
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+    }
+    input{
+      margin: 0 0 20px 0;
+    }
+    body{
+       font-family: "Verdana";
+     font-size: 20px;
+     font-weight: normal;
+     padding: 0 5%;	
+    }
+    h1 {
+      font-family: 'Courier New', Courier, monospace;
+      font-weight: bold;
+      font-size: 40px;
+      color: #1E88E5;
+      background-color: red;
+    }
+    #form-boot{
+	background: linear-gradient(to right, #64B5F6,#3D5AFE);
+    }
+.err, .alrt{
+        display: none;
+      }
+.content{
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.content img{
+  width: 50%;
+}
+  </style>
+
+<h1 class="mb-5">AJAX</h1>
+<p>сайт разворачивать на локалке</p> 
+
+<div class="container">
+<div class="reference row flex-column">справочные материалы
+
+<a href="https://learn.javascript.ru/xmlhttprequest" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">XMLHttpRequest</a>
+
+<button class="btn btn-success" id="show">показать общие моменты</button>
+
+</div>
+</div>
+
+<div class="content">
+  <img src="img/i-1.png" alt="">
+  <img src="img/i-2.png" alt="">
+  <img src="img/i-3.png" alt="">
+  <img src="img/i-4.png" alt="">
+  <img src="img/i-5.png" alt="">
+  <img src="img/i-6.png" alt="">
+  <img src="img/i-7.png" alt="">
+  <img src="img/i-8.png" alt="">
+</div>
+
+ <hr>
+  <hr>
+<h2>метод GET</h2>
+<hr>
+<p>показать ip</p>
+  <input type="button" id="show_ip" value="показать мой мой ip"> 
+   <div id="myip"></div>
+  <hr>
+  <hr>
+  <!-- metod post -->
+  <h2>метод POST</h2>
+  <hr>
+  <form>
+    email <br>
+    <input type="email" name="email">
+   телефон <br>
+    <input type="text" name="phone">
+    имя <br>
+    <input type="text" name="name">
+    <br>
+    <input type="button" id="send" value="Отправить">
+  </form>
+  <div id="result"></div>
+
+
+
+
+
+<hr>
+<!-- // -----------форма на джейквери номер три--------------------------- -->
+
+	<div class="container">
+		<div class="row justify-content-center">
+			<h2 class="text">Отправка данных через PHP + Ajax. + bootstrap</h2>
+			<div class="col-md-10 mb-5 ">
+				<form id="form-boot"  class="p-3">
+					<small class="text-warning pb-3">* Все поля обязательны для заполнения</small>
+				  <div class="form-group">
+				    <input type="email" class="form-control" name="email" placeholder="Ваш email" required>
+				  </div>
+				  <div class="form-group">
+				    <input type="text" class="form-control" name="theme" placeholder="Тема сообщения" required>
+				  </div>
+				  <div class="form-group">
+				    <textarea class="form-control" rows="3" name="message" placeholder="Введите сообщение" required></textarea>
+				  </div>
+				  <button class="submit btn btn-primary">Отправить</button>
+				</form>
+        <div class="alrt">
+          <div class="alert alert-success alert-dismissible fade show mt-3" role="alert">
+            <strong>Сообщение успешно отправлено!</strong> Вы можете закрыть это сообщение.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+      </div>
+      
+      <div class="err">
+          <div class="alert alert-danger alert-dismissible fade show mt-3" role="alert">
+            <strong>Сообщение не отправлено!</strong> Попробуйте ще раз.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+      </div>
+    
+    
+    </div>
+		</div>
+    
+	</div>
+
+<hr>
+<h4>форма на jquery №2 </h4>
+
+  <div id="result_form"></div> 
+
+  <form method="post" id="ajax_form" action="" >
+        <input type="text" name="name" placeholder="NAME" /><br>
+        <input type="text" name="phonenumber" placeholder="YOUR PHONE" /><br>
+        <input type="button" id="btn" value="Отправить" />
+    </form>
+<hr>
+  <script
+  src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
+ 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="main.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
